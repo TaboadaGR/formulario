@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>formulario</title>
+	<link rel="stylesheet" type="text/css" href="formulario.css">
+	<script type="text/javascript" src="formulario.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	
+<!-- Uso de Jquery -->
+	<script>
+		$(document).ready(function(){
+			$('#mensaje').keyup(function(){
+			  var texto = $('#mensaje').val();
+
+			  var listaNegra =["Zorra","zorra","Llepaculs","llepaculs","Macaquiño","macaquiño","Mamón","mamón","Nigga","nigga","supercalifragilisticoespialidoso"];
+
+
+			  for (var i = listaNegra.length - 1; i >= 0; i--) {
+
+				console.log(i);
+
+				if (texto.includes(listaNegra[i])) {
+					$('#mensaje').val("");
+					alert("No me seas hijo de puta poniendo barbaridades");
+				}
+			  }
+			});
+	  });
+cd 
+	</script>
+
+
+
+
+
+		<form method="POST" action="">
+			<ul class="lista1">
+		      <li>
+		        <label for="nombre">Nombre:</label>
+		        <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre">
+		      </li>
+		      <li>
+		        <label for="apellidos">Apellidos:</label>
+		        <input type="text" id="apellidos" name="apellidos" placeholder="Introduce tus apellidos"  onchange="validarNombre()">
+		      </li>
+		      <li>
+		        <label for="email">Email:</label>
+		        <input type="text" name="email" id="email" placeholder="Enter your email here"  onchange="validarEmail(email.value);">
+		      </li>
+		      <li>
+		        <label for="telefono">Teléfono:</label>
+		        <input type="tel" name="tlfn" id="telefono" placeholder="Introduzca su teléfono" onchange="validarTelefono(tlfn.value);">
+		      </li>
+		      <li>
+		        <label for="Contrasena">Contraseña:</label>
+		        <input type="password" id="contrasena1" name="contrasena1" placeholder="Introduzca su contraseña">
+		      </li>
+		      <li>
+		        <label for="Contrasena">Contraseña:</label>
+		        <input type="password" id="contrasena2" name="contrasena2" placeholder="Repita su contraseña" onchange="comprobarContrasena(contrasena1.value,contrasena2.value)">
+		      </li>
+		      <li>
+		        <label for="CP">Código Postal:</label>
+		        <input type="text" id="CP" name="codigo" placeholder="Introduzca su código postal" onchange="comprobarCP(codigo.value)">
+		      </li>
+		      <li>
+		        <label for="Mensaje">Mensaje:</label>
+		        <textarea rows="6" id="mensaje" name="mensaje" placeholder="Introduzca un mensaje sin insultos:" ></textarea>
+		      </li>
+		      <li>
+		        <button type="submit" onclick="enviar()">Enviar</button>
+		      </li>
+		    </ul>
+		</form>
+</body>
+</html>

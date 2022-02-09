@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400&display=swap');
+
+*{
+	margin: 0px auto;
+	
+}
+body {
+  font-family: 'Spartan', sans-serif;
+  background: #5A5A5A;
+  color: #fff;
+  padding: 50px 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.container * {
+  box-sizing: border-box;
+}
+
+.lista1,
+.flex-inner {
+  list-style-type: none;
+  padding: 0;
+}
+
+.lista1 {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/*Para estructurar en vertical los campos */
+.lista1 li,
+.flex-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flex-inner {
+  padding: 0 8px;
+  justify-content: space-between;  
+}
+
+/*Espaciado entre los campos de texto*/
+.lista1 > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.lista1 li label,
+.lista1 li p {
+  padding: 8px;
+  font-weight: 300;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+/*alineación de los campos de datos*/
+.lista1 > li > label,
+.lista1 li p {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+/*Alarga los campos de datos*/
+.lista1 > li > label + *,
+.flex-inner {
+  flex: 1 0 220px;
+}
+
+.lista1 li p {
+  margin: 0;
+}
+
+/*Hace los campos de datos más anchos*/
+.lista1 li input:not([type='checkbox']),
+.lista1 li textarea {
+  padding: 15px;
+  border: none;
+}
+
+.lista1 li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+}
+
+.flex-inner li {
+  width: 100px;
+}
